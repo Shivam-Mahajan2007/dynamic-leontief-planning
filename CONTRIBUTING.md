@@ -114,8 +114,7 @@ docs: update installation instructions for Windows
 Feel free to:
 - Open an issue for discussion
 - Email the maintainers
-- Join our [discussion forum/slack/discord] (if applicable)
-
+- Join our Discord CCR (https://discord.gg/PHy55weh)
 ## Code of Conduct
 
 - Be respectful and inclusive
