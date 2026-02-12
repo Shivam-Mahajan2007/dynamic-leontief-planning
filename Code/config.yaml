@@ -1,0 +1,92 @@
+# ========================================
+# IO Planning Model - Configuration File
+# ========================================
+
+# Simulation Time Parameters
+# ---------------------------
+T_plan: 60              # Planning horizon (months)
+W: 12                   # Window size for AR(1) estimation (months)
+
+# Sector Composition
+# ------------------
+n: 64                   # Total number of sectors
+n_light: 20            # Number of light industry/services sectors
+n_heavy: 24            # Number of heavy industry sectors
+n_medium: 20           # Number of medium manufacturing sectors
+
+# Economic Parameters
+# -------------------
+k: 40                  # Number of Neumann series iterations
+tau: 0.0125             # Tax rate
+b: 0.01              # Capacity buffer parameter
+g_a: 0.05              # Annual growth rate
+random_seed: 70        # Random seed for reproducibility
+
+# Demand Shock Parameters
+# -----------------------
+sigma: 0.01            # General shock standard deviation
+shock_sigma: 0.006    # Demand shock standard deviation
+shock_persist: 0.5     # Shock persistence parameter
+
+# Sector-Specific Trend Parameters (monthly rates)
+# ------------------------------------------------
+mu_heavy: -0.0012      # Heavy industry secular trend (decline)
+mu_medium: -0.0003     # Medium manufacturing trend (slight decline)
+mu_light: 0.0015       # Services/light industry trend (growth)
+
+# Annual Depreciation Rates (converted to monthly in code)
+# ---------------------------------------------------------
+delta_heavy_min: 0.08   # Heavy industry minimum annual depreciation
+delta_heavy_max: 0.15   # Heavy industry maximum annual depreciation
+delta_medium_min: 0.05  # Medium manufacturing minimum annual depreciation
+delta_medium_max: 0.08  # Medium manufacturing maximum annual depreciation
+delta_light_min: 0.02   # Light industry minimum annual depreciation
+delta_light_max: 0.05   # Light industry maximum annual depreciation
+
+# Capital Intensity Ranges
+# -------------------------
+heavy_diag_min: 0.8     # Heavy industry capital intensity minimum
+heavy_diag_max: 1.2     # Heavy industry capital intensity maximum
+medium_diag_min: 0.6    # Medium manufacturing capital intensity minimum
+medium_diag_max: 0.8    # Medium manufacturing capital intensity maximum
+light_diag_min: 0.1     # Light industry capital intensity minimum
+light_diag_max: 0.6     # Light industry capital intensity maximum
+
+# Initial Conditions
+# ------------------
+initial_capacity_buffer: 1.025  # Initial capacity buffer multiplier
+
+# Neumann Convergence Test
+# -------------------------
+neumann_tolerance: 1.0e-4  # Convergence tolerance
+neumann_max_k: 50          # Maximum iterations for convergence test
+
+# Input Data Files
+# ----------------
+# These files should be in the same directory as the script
+io_matrix_file: "Spanish A-matrix.xlsx"
+io_sheet_name: "A Matrix"
+value_added_file: "Value added.xlsx"
+consumption_file: "Consumption and total production.xlsx"
+
+# Output Settings
+# ---------------
+output_dir: "simulation_outputs"
+save_plots: true
+save_csv: true
+plot_dpi: 300
+plot_skip_points: 1     # Show every (skip_points+1)th point in plots
+
+# Plotting Style
+# --------------
+figure_width: 6.5
+figure_height: 4
+figure_dpi: 150
+font_size: 11
+line_width: 1.2
+marker_size: 4
+
+live_plots: true
+live_update_freq: 1
+live_speed: 0.4
+keep_plots_open: true

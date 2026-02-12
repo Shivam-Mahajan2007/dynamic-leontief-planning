@@ -1,0 +1,44 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite both the article and the software itself."
+type: software
+title: "Dynamic Input–Output Planning Model: Python Implementation"
+version: 1.0.0
+date-released: 2025-02-13
+authors:
+  - family-names: "Mahajan"
+    given-names: "Shivam"
+    affiliation: "Independent Researcher"
+    country: "IN"
+  - family-names: "Singh"
+    given-names: "Arjunveer"
+    affiliation: "Independent Researcher"
+    country: "IN"
+repository-code: "https://github.com/yourusername/dynamic-leontief-planning"
+keywords:
+  - input-output analysis
+  - Leontief model
+  - economic planning
+  - dynamic systems
+  - computational economics
+  - production planning
+  - Neumann series
+  - feedback control
+license: MIT
+abstract: >-
+  This software implements a dynamic extension of the classical
+  Leontief input–output framework for large-scale production planning.
+  The model formulates planning as a viability-preserving tracking
+  problem with price-feedback-based demand adjustment, capital
+  accumulation, and low-order autoregressive extrapolation. The
+  implementation uses sparse linear algebra and truncated Neumann
+  series to ensure computational tractability at realistic scales.
+references:
+  - type: article
+    title: "On a Dynamic Input–Output Framework for Price-Feedback-Based Production Planning"
+    authors:
+      - family-names: "Mahajan"
+        given-names: "Shivam"
+      - family-names: "Singh"
+        given-names: "Arjunveer"
+    year: 2025
+    # Add journal, doi, etc. when published

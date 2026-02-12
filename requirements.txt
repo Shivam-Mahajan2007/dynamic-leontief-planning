@@ -1,0 +1,8 @@
+# Requirements for Input-Output Planning Model Simulation
+# Install with: pip install -r requirements.txt
+
+numpy>=1.20.0
+matplotlib>=3.3.0
+pandas>=1.2.0
+openpyxl>=3.0.0
+pyyaml>=5.4.0
